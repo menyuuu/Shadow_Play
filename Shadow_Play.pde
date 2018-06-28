@@ -62,11 +62,6 @@ void setup()
   birds[5][1] = "Kuckuck-01.wav";
   birds[5][2] = "Kuckuck-01.wav";
 
-  // birds[6][0] = "Meise-01.wav";
-  // birds[6][1] = "Meise-01.wav";
-  // birds[6][2] = "Meise-01.wav";
-
-
   minim = new Minim(this);
 
   leap = new LeapMotion(this);
@@ -85,7 +80,7 @@ void setup()
 void draw()
 {  //background(255);
 
-  //image(startscreen, 0, 0, width, height);     //MACBOOk
+  //image(startscreen, 0, 0, width, height);     //MACBOOK
   image(startscreen, -2, -240, 1285, 1600);     //PROJECTOR
 
   for (Hand hand : leap.getHands ()) 
@@ -99,21 +94,21 @@ void draw()
   float backgroundY = (-250-(handPosition.y*1.5)/1.6);
   //println(handPosition.y);
 
-  // handle images 
+  // HANDLE IMAGES
 
-  //BACKGROUND
+  //background
   image(background, 200, backgroundY-100, 984, 2518); 
 
-  //BACK
+  //back
   image(back, 200, backY-100, 984, 2518);
 
-  //MIDDLE
+  //middle
   image(middle, 200, middleY-100, 984, 2518);
 
-  //FRONT
+  //front
   image(front, 200, frontY-100, 984, 2518);
 
-  //FRONT_LIGHT
+  //front_light
   //image(frontLight, -2, -400, 1285, 1600);     //MACBOOK
   image(frontLight, -2, -240, 1285, 1600);       //PROJECTOR
 
@@ -163,8 +158,6 @@ void draw()
       // misisng
       //image(startscreen, 0, 0, width, height);    //MACBOOK
       image(startscreen, -2, -240, 1285, 1600);     //PROJECTOR
-
-      //image(startscreen, 470, -850, 984, 2519);
       visitorHand = null;
       // println("no Right hand");
       //timer = millis();
